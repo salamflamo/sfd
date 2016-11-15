@@ -3,7 +3,8 @@
 //pemain
 Route::get('/daftar','PemainController@create');
 Route::post('/daftar','PemainController@store');
-Route::get('/lihat-pemain','PemainController@show');
+Route::get('/lihat-pemain','PemainController@show_all');
+
 
 
 // Home

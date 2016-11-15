@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Pemain extends Migration
+class TambahKolomKode extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class Pemain extends Migration
      */
     public function up()
     {
-        Schema::create('pemain',function (Blueprint $table){
-            $table->increments('id');
-            $table->string('username',30)->unique();
-            $table->string('no_hp');
-            $table->string('email')->unique();
-            $table->integer('score');
+        Schema::table('pemains',function ($table){
+            $table->string('kode',5)->unique();
 
         });
     }

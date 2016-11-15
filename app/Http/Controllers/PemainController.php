@@ -37,8 +37,8 @@ class PemainController extends Controller
     public function store(Request $request)
     {
         $Pemain = new Pemains();
-        $acakId = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz",3)),0,5);
-        $Pemain->id = $acakId;
+        $acakkode = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz",3)),0,5);
+        $Pemain->kode = $acakkode;
         $Pemain->username = $request->get('username');
         $Pemain->email = $request->get('email');
         $Pemain->no_hp = $request->get('no_hp');
@@ -57,7 +57,14 @@ class PemainController extends Controller
      */
     public function show($id)
     {
-        //
+
+    }
+
+    public function show_all()
+    {
+        $pemains = Pemains::all();
+        return view('pemain.show-all')->withPemains($pemains);
+
     }
 
     /**

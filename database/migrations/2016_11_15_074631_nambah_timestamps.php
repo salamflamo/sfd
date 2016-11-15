@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GantiTipeDataIdDiTabelPemain extends Migration
+class NambahTimestamps extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class GantiTipeDataIdDiTabelPemain extends Migration
      */
     public function up()
     {
-        Schema::table('pemain', function ($table){
-            $table->string('id', 5)->unique()->change();
-
+        Schema::table('pemains',function ($table){
+            $table->timestamps();
 
         });
     }
