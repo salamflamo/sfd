@@ -37,6 +37,7 @@ class PemainController extends Controller
     public function store(Request $request)
     {
         $Pemain = new Pemains();
+        $Pemain->nama = $request->get('nama');
         $acakkode = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz",3)),0,5);
         $Pemain->kode = $acakkode;
         $Pemain->username = $request->get('username');
@@ -45,7 +46,7 @@ class PemainController extends Controller
         $Pemain->score = 0;
         $Pemain->save();
 
-        return redirect('/daftar');
+        return redirect('/lihat-pemain');
 
     }
 
@@ -75,7 +76,8 @@ class PemainController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pemain = Pemains::where('id',$id)->first();
+        return view('pemain.edit-pemain')->withPemain($pemain);
     }
 
     /**
@@ -85,9 +87,20 @@ class PemainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $pemain_id = $request->get('id');
+        $pemain = Pemains::find($pemain_id);
+        $pemain->nama = $request->get('nama');
+        $pemain->username = $request->get('username');
+        $pemain->email = $request->get('email');
+        $pemain->kode = $request->get('kode');
+        $pemain->no_hp = $request->get('no_hp');
+        $pemain->score = $request->get('score');
+        $pemain->save();
+
+        return redirect('/show-all')->withPemain($pemain);
+
     }
 
     /**

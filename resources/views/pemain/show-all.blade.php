@@ -3,9 +3,11 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>username</th>
+                <th>Nama</th>
+                <th>Username</th>
                 <th>Email</th>
-               <th>score</th>
+                <th>Kode</th>
+               <th>Score</th>
             </tr>
 
         </thead>
@@ -13,8 +15,10 @@
         <tbody>
             <tr>
                 <td>{{$pemain->id}}</td>
+                <td>{{$pemain->nama}}</td>
                 <td>{{$pemain->username}}</td>
                 <td>{{$pemain->email}}</td>
+                <td>{{$pemain->kode}}</td>
                 <td>{{$pemain->score}}</td>
             </tr>
         @endforeach
