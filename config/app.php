@@ -194,6 +194,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Cviebrock\LaravelElasticsearch\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -260,6 +261,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
         'Lipsum' => Magyarjeti\LaravelLipsum\LipsumFacade::class,
+        'Elasticsearch' => Cviebrock\LaravelElasticsearch\Facade::class,
     ],
 
 ];

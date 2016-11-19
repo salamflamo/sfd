@@ -1,13 +1,15 @@
 <?php
 
 //pemain
-Route::get('/daftar','PemainController@create');
-Route::post('/daftar','PemainController@store');
+Route::get('/daftar-mampir','PemainController@index');
+Route::post('/daftar-mampir','PemainController@store');
 Route::get('/edit/{id}','PemainController@edit');
 Route::post('/edit','PemainController@update');
+Route::get('/hapus/{id}','PemainController@destroy');
 Route::get('/lihat-pemain','PemainController@show_all');
 
-
+//codehours
+Route::get('daftar-codehours','CodehoursController@index');
 
 // Home
 Route::get('/', 'HomeController')->name('home');

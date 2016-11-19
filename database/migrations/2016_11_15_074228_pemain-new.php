@@ -14,12 +14,13 @@ class PemainNew extends Migration
     public function up()
     {
         Schema::create('pemains',function (Blueprint $table){
-            $table->string('id',5)->unique();
+            $table->increments('id');
+            $table->string('nama');
             $table->string('username',30)->unique();
             $table->string('no_hp');
             $table->string('email')->unique();
             $table->integer('score');
-
+            $table->timestamps();
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GantinNamaTablePemainJadiPemains extends Migration
+class TambahKode extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class GantinNamaTablePemainJadiPemains extends Migration
      */
     public function up()
     {
-        Schema::rename('pemain', 'pemains');
+        Schema::table('pemains',function ($table){
+            $table->string('kode',5);
+
+        });
     }
 
     /**

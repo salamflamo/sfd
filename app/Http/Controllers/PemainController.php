@@ -14,7 +14,7 @@ class PemainController extends Controller
      */
     public function index()
     {
-
+        return view('pemain.daftar');
     }
 
     /**
@@ -25,7 +25,7 @@ class PemainController extends Controller
     public function create()
     {
 
-        return view('pemain.daftar');
+
     }
 
     /**
@@ -87,19 +87,22 @@ class PemainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function update(Request $request)
     {
-        $pemain_id = $request->get('id');
-        $pemain = Pemains::find($pemain_id);
-        $pemain->nama = $request->get('nama');
-        $pemain->username = $request->get('username');
-        $pemain->email = $request->get('email');
-        $pemain->kode = $request->get('kode');
-        $pemain->no_hp = $request->get('no_hp');
-        $pemain->score = $request->get('score');
-        $pemain->save();
+        $id = $request->input('id');
+        $Pemain = Pemains::find($id);
+        $Pemain->nama = $request->input('nama');
+        $Pemain->username = $request->input('username');
+        $Pemain->kode = $request->input('kode');
+        $Pemain->email = $request->input('email');
+        $Pemain->no_hp = $request->input('no_hp');
+        $Pemain->score =$request->input('score') + $Pemain->score();
+        $Pemain->save();
 
-        return redirect('/show-all')->withPemain($pemain);
+        return redirect('lihat-pemain');
 
     }
 
@@ -111,6 +114,10 @@ class PemainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pemain = Pemains::find($id);
+        $pemain->delete();
+
+        return redirect('lihat-pemain');
+
     }
 }

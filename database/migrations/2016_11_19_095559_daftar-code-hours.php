@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TambahKolomKode extends Migration
+class DaftarCodeHours extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,14 @@ class TambahKolomKode extends Migration
      */
     public function up()
     {
-        Schema::table('pemains',function ($table){
-            $table->string('kode',5)->unique();
+        Schema::create('codehours', function ($table){
+            $table->increments('id');
+            $table->string('nama');
+            $table->string('email');
+            $table->string('jurusan');
+            $table->string('no_hp');
+            $table->boolean('confirmed');
+
 
         });
     }
