@@ -1,7 +1,6 @@
 <?php
 
 //pemain
-Route::get('/home','WorkshopController@index');
 Route::get('/daftar-mampir','PemainController@index');
 Route::post('/daftar-mampir','PemainController@store');
 Route::get('/edit/{id}','PemainController@edit');
@@ -10,7 +9,10 @@ Route::get('/hapus/{id}','PemainController@destroy');
 Route::get('/lihat-pemain','PemainController@show_all');
 
 //codehours
-Route::get('daftar-codehours','CodehoursController@index');
+Route::get('/home','CodehoursController@index');
+Route::get('/daftar-codehours','CodehoursController@create');
+Route::post('/daftar-codehours','CodehoursController@store');
+
 
 // Home
 Route::get('/', 'HomeController')->name('home');

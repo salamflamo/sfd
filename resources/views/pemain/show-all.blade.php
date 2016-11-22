@@ -77,7 +77,8 @@
 
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    {!! Html::script('https://code.jquery.com/jquery-2.1.1.min.js') !!}
+    {!! Html::script('js/materialize.min.js') !!}
 </body>
 </html>
