@@ -262,6 +262,7 @@ return [
         'HTML' => Collective\Html\HtmlFacade::class,
         'Lipsum' => Magyarjeti\LaravelLipsum\LipsumFacade::class,
         'Elasticsearch' => Cviebrock\LaravelElasticsearch\Facade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

@@ -1,6 +1,7 @@
 <?php
 
 //pemain
+Route::get('/home','WorkshopController@index');
 Route::get('/daftar-mampir','PemainController@index');
 Route::post('/daftar-mampir','PemainController@store');
 Route::get('/edit/{id}','PemainController@edit');
