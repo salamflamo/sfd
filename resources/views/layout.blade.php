@@ -11,7 +11,9 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--css ku dewe-->
+<!-- icon dewe -->
+    <link rel="shortcut icon" href="{{{ asset('img/sfdlogo.png') }}}">
+         <!--css ku dewe-->
       <style type="text/css">
           img.logosfd{
               width: 300px;
