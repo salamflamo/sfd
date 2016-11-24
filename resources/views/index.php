@@ -12,25 +12,27 @@
     <title>Software Freedom Day</title>
 
     <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    {!! Html::style('vendor-workshop/bootstrap/css/bootstrap.min.css') !!}
     <!-- Bootstrap external -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Custom Fonts -->
-    {!! Html::style('vendor-workshop/font-awesome/css/font-awesome.min.css') !!}
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- Theme CSS -->
-    {!! Html::style('css-workshop/agency.min.css') !!}
+    <link href="css/agency.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- style="color:#8D8D86" -->
     <style>
@@ -267,7 +269,15 @@
                 </div>
         </div>
     </section>
-    @yield('content')
+    <?php
+      if (isset($_GET['workshop'])) {
+        include_once 'workshop.php';
+      } elseif (isset($_GET['gamification'])) {
+        include_once 'gamification.php';
+      } elseif (isset($_GET['thanks'])) {
+        include_once 'thanks.php';
+      }
+     ?>
     <!-- Clients Aside -->
     <aside id="sponsor" class="clients">
         <div class="container">
@@ -320,120 +330,23 @@
                 </div>
             </div>
         </div>
-</section>
-@yield('content')
-<!-- <section id="register">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Register</h2>
-                <h3 class="section-subheading text-muted">Register form for Workshop</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nama" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="Nomer Handphone" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Apa yang kamu ketahui tentang FOSS" id="message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <button type="submit" class="btn btn-xl">Daftar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- Clients Aside -->
-<aside id="sponsor" class="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h4 class="section-subheading text-muted">Acara keren ini didukung oleh</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <a href="http://dinus.ac.id">
-                    <img style="width:80px;height:80px" src="img/sfd/logos/dinus_fik.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="http://www.clowordistro.com/">
-                    <img style="width:220px;height:80px" src="img/sfd/logos/clowor.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="http://tealinuxos.org">
-                    <img style="width:200px;height:100px" src="img/sfd/logos/tea_linux.jpg" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</aside>
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <span class="copyright">Made with &hearts; by Dinus Open Source Community</span>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    <li><a href="https://twitter.com/doscomedia"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li><a href="https://www.facebook.com/doscomedia/"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/doscomedia/"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    <li><a href="https://startbootstrap.com/">Thanks to Start Bootstrap</li>
-                    <li><a href="http://www.freepik.com">Designed by Freepik</a></li>
-                    <li><a href="http://protiumdesign.com">Protium Design</a></i>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
-<!-- jQuery -->
-{!! Html::script('vendor-workshop/jquery/jquery.min.js') !!}
-<!-- Bootstrap Core JavaScript -->
-{!! Html::script('vendor-workshop/bootstrap/js/bootstrap.min.js') !!}
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-{!! Html::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') !!}
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-<!-- Contact Form JavaScript -->
-{!! Html::script('js-workshop/jqBootstrapValidation.js') !!}
-{!! Html::script('js-workshop/contact_me.js') !!}
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-<!-- Theme JavaScript -->
-{!! Html::script('js-workshop/agency.min.js') !!}
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
 
 </body>
 
