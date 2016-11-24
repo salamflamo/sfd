@@ -6,7 +6,7 @@
               <div class="nav-wrapper warnaku">
               <a href="#" class="brand-logo center">Para Pemain</a>
               <ul id="nav-mobile" class="left hide-on-med-and-down">
-                  <li><a href="#" class="brand-logo"><img src="img/sfdlogo.png" alt="sfdlogo" class="responsive-img homelogo"></a></li>
+                  <li><a href="/sfdmulai" class="brand-logo"><img src="img/sfdlogo.png" alt="sfdlogo" class="responsive-img homelogo"></a></li>
               </ul>
               </div>
           </nav>

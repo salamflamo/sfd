@@ -1,18 +1,18 @@
 <?php
 
 //pemain
+Route::get('/home','WorkshopController@index');
 Route::get('/daftar-mampir','PemainController@index');
 Route::post('/daftar-mampir','PemainController@store');
 Route::get('/edit/{id}','PemainController@edit');
 Route::post('/edit','PemainController@update');
 Route::get('/hapus/{id}','PemainController@destroy');
 Route::get('/lihat-pemain','PemainController@show_all');
+//iki jane admin
+Route::get('/sfdmulai','PemainController@dimulai');
 
 //codehours
-Route::get('/home','CodehoursController@index');
-Route::get('/daftar-codehours','CodehoursController@create');
-Route::post('/daftar-codehours','CodehoursController@store');
-
+Route::get('daftar-codehours','CodehoursController@index');
 
 // Home
 Route::get('/', 'HomeController')->name('home');
@@ -24,10 +24,12 @@ Route::get('language/{lang}', 'LanguageController')
 // Admin
 Route::get('admin', 'AdminController')->name('admin');
 
+
+
 // Medias
 Route::get('medias', 'FilemanagerController')->name('medias');
 
-// Blog 
+// Blog
 Route::get('blog/tag', 'BlogFrontController@tag');
 Route::get('blog/search', 'BlogFrontController@search');
 Route::get('articles', 'BlogFrontController@index');
@@ -58,10 +60,10 @@ Route::resource('user', 'UserController', ['except' => 'index']);
 Route::put('uservalid/{id}', 'UserAjaxController@valid');
 Route::put('userseen/{user}', 'UserAjaxController@updateSeen');
 
-// Authentication 
+// Authentication
 Auth::routes();
 
-// Email confirmation 
+// Email confirmation
 Route::get('resend', 'Auth\RegisterController@resend');
 Route::get('confirm/{token}', 'Auth\RegisterController@confirm');
 

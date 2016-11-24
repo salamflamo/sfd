@@ -32,4 +32,5 @@ class AdminController extends Controller
 
         return view('back.index', compact('pannels'));
     }
+
 }
