@@ -89,15 +89,8 @@ class CodehoursController extends Controller
     }
     public function search(){
 
+            return view('codehours.cari-admin');
 
-                return view('codehours.cari-admin');
-
-    }
-    public function searchpost(Request $request){
-
-        $query = $request->get('query');
-        $hasil = Codehours::where('kode_codehours','LIKE','%'.$query.'%')->orderBy('id')->get();
-        return view('codehours.hasil',['hasil' => $hasil]);
 
     }
     public function searchpostadmin(Request $request){
