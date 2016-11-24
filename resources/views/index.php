@@ -271,7 +271,7 @@
     </section>
     <?php
       if (isset($_GET['workshop'])) {
-        include_once 'workshop.php';
+        include_once 'workshop.blade.php';
       } elseif (isset($_GET['gamification'])) {
         include_once 'gamification.php';
       } elseif (isset($_GET['thanks'])) {

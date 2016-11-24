@@ -111,7 +111,7 @@
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                       <div class="timeline-image">
-                        <img class="img-circle img-responsive" src="img/icon/workshop.jpg">
+                        <img class="img-circle img-responsive" src="img-workshop/icon/workshop.jpg">
                       </div>
                     </span>
                     <h4 class="service-heading">WORKSHOP</h4>
@@ -120,7 +120,7 @@
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                       <div class="timeline-image">
-                        <img class="img-circle img-responsive" src="img/icon/speaker.png">
+                        <img class="img-circle img-responsive" src="img-workshop/icon/speaker.png">
                       </div>
                     </span>
                     <h4 class="service-heading">TALKSHOW</h4>
@@ -129,7 +129,7 @@
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                       <div class="timeline-image">
-                        <img class="img-circle img-responsive" src="img/icon/festival.png">
+                        <img class="img-circle img-responsive" src="img-workshop/icon/festival.png">
                       </div>
                     </span>
                     <h4 class="service-heading">FESTIVAL</h4>
@@ -153,7 +153,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                              <img class="img-circle img-responsive" src="img/icon/workshop.jpg">
+                              <img class="img-circle img-responsive" src="img-workshop/icon/workshop.jpg">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -169,7 +169,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                              <img class="img-circle img-responsive" src="img/icon/speaker.png">
+                              <img class="img-circle img-responsive" src="img-workshop/icon/speaker.png">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -186,7 +186,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                              <img class="img-circle img-responsive" src="img/icon/festival.png">
+                              <img class="img-circle img-responsive" src="imgworkshop/icon/festival.png">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -219,7 +219,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="team-member">
-                        <img width="200px" height="200px" src="img/pembicara/dikyarga.jpg" class="img-responsive img-circle" alt="">
+                        <img width="200px" height="200px" src="img-workshop/pembicara/dikyarga.jpg" class="img-responsive img-circle" alt="">
                         <h4>Diky Arga Anggara</h4>
                         <br>
                         <ul class="list-inline social-buttons">
@@ -234,7 +234,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="team-member">
-                        <img width="200px" height="200px" src="img/pembicara/rezafaizarahman.png" class="img-responsive img-circle" alt="">
+                        <img width="200px" height="200px" src="img-workshop/pembicara/rezafaizarahman.png" class="img-responsive img-circle" alt="">
                         <h4>Reza Faiz A Rahman</h4>
                         <br>
                         <ul class="list-inline social-buttons">
@@ -248,25 +248,6 @@
                     </div>
                 </div>
 
-                <div id="daftar" class="row text-center">
-                  <div class="col-lg-12">
-                    <h3>DAFTAR WORKSHOP DAN GAMIFICATION</h3>
-                  </div>
-                  <div class="col-lg-12">
-                    <?php
-                      if (isset($_GET['workshop'])) {
-                        echo "<a href='?gamification=#gamification' class='btn btn-xl'>Daftar Gamification</a>";
-                      } elseif (isset($_GET['gamification'])){
-                        echo "<a href='?workshop=#workshop' class='btn btn-xl'>Daftar Workshop</a>";
-                      }  else {
-                        echo "<a href='?workshop=#workshop' class='btn btn-xl'>Daftar Workshop</a>&nbsp;&nbsp;&nbsp;&nbsp";
-                        echo "<a href='?gamification=#gamification' class='btn btn-xl'>Daftar Gamification</a>";
-                      }
-                     ?>
-                  </div>
-                </div>
-        </div>
-    </section>
     @yield('content')
     <!-- Clients Aside -->
     <aside id="sponsor" class="clients">
@@ -279,17 +260,17 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <a href="http://dinus.ac.id">
-                        <img style="width:80px;height:80px" src="img/logos/dinus_fik.png" class="img-responsive img-centered" alt="">
+                        <img style="width:80px;height:80px" src="img-workshop/logos/dinus_fik.png" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <a href="http://www.clowordistro.com/">
-                        <img style="width:220px;height:80px" src="img/logos/clowor.png" class="img-responsive img-centered" alt="">
+                        <img style="width:220px;height:80px" src="img-workshop/logos/clowor.png" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <a href="http://tealinuxos.org">
-                        <img style="width:200px;height:100px" src="img/logos/tea_linux.jpg" class="img-responsive img-centered" alt="">
+                        <img style="width:200px;height:100px" src="img-workshop/logos/tea_linux.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
             </div>
@@ -376,17 +357,17 @@
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <a href="http://dinus.ac.id">
-                    <img style="width:80px;height:80px" src="img/sfd/logos/dinus_fik.png" class="img-responsive img-centered" alt="">
+                    <img style="width:80px;height:80px" src="img-workshop/sfd/logos/dinus_fik.png" class="img-responsive img-centered" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="http://www.clowordistro.com/">
-                    <img style="width:220px;height:80px" src="img/sfd/logos/clowor.png" class="img-responsive img-centered" alt="">
+                    <img style="width:220px;height:80px" src="img-workshop/sfd/logos/clowor.png" class="img-responsive img-centered" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="http://tealinuxos.org">
-                    <img style="width:200px;height:100px" src="img/sfd/logos/tea_linux.jpg" class="img-responsive img-centered" alt="">
+                    <img style="width:200px;height:100px" src="img-workshop/sfd/logos/tea_linux.jpg" class="img-responsive img-centered" alt="">
                 </a>
             </div>
         </div>
