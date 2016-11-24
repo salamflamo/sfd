@@ -12,25 +12,27 @@
     <title>Software Freedom Day</title>
 
     <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    {!! Html::style('vendor-workshop/bootstrap/css/bootstrap.min.css') !!}
     <!-- Bootstrap external -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Custom Fonts -->
-    {!! Html::style('vendor-workshop/font-awesome/css/font-awesome.min.css') !!}
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- Theme CSS -->
-    {!! Html::style('css-workshop/agency.min.css') !!}
+    <link href="css/agency.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- style="color:#8D8D86" -->
     <style>
@@ -267,7 +269,15 @@
                 </div>
         </div>
     </section>
-    @yield('content')
+    <?php
+      if (isset($_GET['workshop'])) {
+        include_once 'workshop.php';
+      } elseif (isset($_GET['gamification'])) {
+        include_once 'gamification.php';
+      } elseif (isset($_GET['thanks'])) {
+        include_once 'thanks.php';
+      }
+     ?>
     <!-- Clients Aside -->
     <aside id="sponsor" class="clients">
         <div class="container">
@@ -322,20 +332,21 @@
         </div>
     </footer>
 
-<!-- jQuery -->
-{!! Html::script('vendor-workshop/jquery/jquery.min.js') !!}
-<!-- Bootstrap Core JavaScript -->
-{!! Html::script('vendor-workshop/bootstrap/js/bootstrap.min.js') !!}
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
-<!-- Plugin JavaScript -->
-{!! Html::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') !!}
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Contact Form JavaScript -->
-{!! Html::script('js-workshop/jqBootstrapValidation.js') !!}
-{!! Html::script('js-workshop/contact_me.js') !!}
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-<!-- Theme JavaScript -->
-{!! Html::script('js-workshop/agency.min.js') !!}
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
 
 </body>
 
