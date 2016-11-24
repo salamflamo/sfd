@@ -45,8 +45,8 @@ class CodehoursController extends Controller
         $codehours->confirmed = 0;
         $codehours->save();
 
-
-        return view('codehours.terimakasih');
+        $data = $codehours->kode_codehours;
+        return view('codehours.terimakasih')->withData($data);
     }
 
 
@@ -69,19 +69,22 @@ class CodehoursController extends Controller
      */
     public function edit($id)
     {
-        //
+        $codehours = Codehours::where('id',$id)->first();
+        return view('codehours.edit-codehours')->withCodehours($codehours);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->input('id');
+        $codehours = Codehours::find($id);
+        $codehours->nama = $request->input('nama');
+        $codehours->email = $request->input('email');
+        $codehours->no_hp = $request->input('no_hp');
+        $codehours->jurusan = $request->input('jurusan');
+        $codehours->kode_codehours = $request->input('kode_codehours');
+        $codehours->confirmed = $request->input('confirmed');
+        $codehours->save();
+
+        return redirect('home');
     }
 
     /**
