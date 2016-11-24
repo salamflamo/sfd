@@ -260,6 +260,7 @@
             </div>
         </div>
 </section>
+@yield('content')
 <!-- <section id="register">
     <div class="container">
         <div class="row">
