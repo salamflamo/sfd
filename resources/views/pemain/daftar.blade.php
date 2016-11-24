@@ -1,55 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Daftar exhibition</title>
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--css ku dewe-->
-      <style type="text/css">
-          img.logosfd{
-              width: 300px;
-              margin: 10px;
-          }
-          span.wajib{
-              color: red;
-          }
-          .warnaku{
-            background-color: #202440 !important;
-          }
-      </style>
-</head>
-<body>
+@extends('layout')
+
+@section('content')
   <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper warnaku">
-            <a href="#" class="brand-logo center">Daftar Exhibition</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-            </ul>
-            </div>
-        </nav>
+    <nav>
+      <div class="nav-wrapper warnaku">
+        <a href="#" class="brand-logo center">Daftar Exhibition</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="sfdmulai" class="brand-logo"><img src="img/sfdlogo.png" alt="sfdlogo" class="responsive-img homelogo"></a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-    <header class="header center warnaku">
-        <img src="img/sfdlogo.png" alt="sfdlogo" class="logosfd ">
-        <h1></h1>
-    </header>
+  <header class="header center warnaku">
+    <img src="img/sfdlogo.png" alt="sfdlogo" class="logosfd ">
+    <h1></h1>
+  </header>
 
 
   <div class="container">
     <h4>Form Pendaftaran Exhition SFD</h1>
-    <p>
+      <p>
         <br>Harap di isi sebenar-benernya
         <br><span class="wajib">* Required</span>
-    </p>
-    <form role="form" method="POST" action="{{ url('/daftar-mampir') }}"
-          xmlns="http://www.w3.org/1999/html">
+      </p>
+      <form role="form" method="POST" action="{{ url('/daftar-mampir') }}"
+      xmlns="http://www.w3.org/1999/html">
       <div class="input-field">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
       </div>
@@ -70,7 +45,7 @@
         <label for="no_hp">no hp</label>
       </div>
       <button class="btn warnaku waves-effect waves-light" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
+        <i class="material-icons right">send</i>
       </button>
       <!-- <input type="submit" name='publish'  value = "Publish"/> -->
     </form>
@@ -98,13 +73,9 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made with <i class="material-icons tiny">favorite</i> by <a href="http://doscom.org">Doscom - Dinus Open Source Community </a>.
+        Made with <i class="material-icons tiny">favorite</i> by <a href="http://doscom.org">Doscom - Dinus Open Source Community </a>.
 
       </div>
     </div>
   </footer>
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-</html>
+@endsection

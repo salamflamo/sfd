@@ -120,4 +120,9 @@ class PemainController extends Controller
         return redirect('lihat-pemain');
 
     }
+
+
+    public function dimulai(){
+        return view('admin.sfdmulai');
+    }
 }
