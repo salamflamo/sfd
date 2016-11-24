@@ -2,29 +2,29 @@
 
 @section('content')
   <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper warnaku">
-            <a href="#" class="brand-logo center">Daftar Exhibition</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-              <li><a href="sfdmulai" class="brand-logo"><img src="img/sfdlogo.png" alt="sfdlogo" class="responsive-img homelogo"></a></li>
-            </ul>
-            </div>
-        </nav>
+    <nav>
+      <div class="nav-wrapper warnaku">
+        <a href="#" class="brand-logo center">Daftar Exhibition</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="sfdmulai" class="brand-logo"><img src="img/sfdlogo.png" alt="sfdlogo" class="responsive-img homelogo"></a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-    <header class="header center warnaku">
-        <img src="img/sfdlogo.png" alt="sfdlogo" class="logosfd ">
-        <h1></h1>
-    </header>
+  <header class="header center warnaku">
+    <img src="img/sfdlogo.png" alt="sfdlogo" class="logosfd ">
+    <h1></h1>
+  </header>
 
 
   <div class="container">
     <h4>Form Pendaftaran Exhition SFD</h1>
-    <p>
+      <p>
         <br>Harap di isi sebenar-benernya
         <br><span class="wajib">* Required</span>
-    </p>
-    <form role="form" method="POST" action="{{ url('/daftar-mampir') }}"
-          xmlns="http://www.w3.org/1999/html">
+      </p>
+      <form role="form" method="POST" action="{{ url('/daftar-mampir') }}"
+      xmlns="http://www.w3.org/1999/html">
       <div class="input-field">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
       </div>
@@ -45,7 +45,7 @@
         <label for="no_hp">no hp</label>
       </div>
       <button class="btn warnaku waves-effect waves-light" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
+        <i class="material-icons right">send</i>
       </button>
       <!-- <input type="submit" name='publish'  value = "Publish"/> -->
     </form>
@@ -73,7 +73,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made with <i class="material-icons tiny">favorite</i> by <a href="http://doscom.org">Doscom - Dinus Open Source Community </a>.
+        Made with <i class="material-icons tiny">favorite</i> by <a href="http://doscom.org">Doscom - Dinus Open Source Community </a>.
 
       </div>
     </div>
