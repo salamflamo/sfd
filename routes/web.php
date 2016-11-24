@@ -1,7 +1,10 @@
 <?php
-
+//search
+Route::get('/cari','CodehoursController@search');
+Route::post('/cari','CodehoursController@searchpost');
+Route::post('cari-admin','CodehoursController@searchpostadmin');
+Route::post('/cari-save','CodehoursController@updateconfirmed');
 //pemain
-Route::get('/home','WorkshopController@index');
 Route::get('/daftar-mampir','PemainController@index');
 Route::post('/daftar-mampir','PemainController@store');
 Route::get('/edit/{id}','PemainController@edit');

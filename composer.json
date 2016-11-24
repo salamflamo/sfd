@@ -11,7 +11,8 @@
         "barryvdh/laravel-elfinder": "^0.3.8",
         "magyarjeti/laravel-lipsum": "^1.1",
         "doctrine/dbal": "^2.5",
-        "cviebrock/laravel-elasticsearch": "^1.2"
+        "cviebrock/laravel-elasticsearch": "^1.2",
+        "laravel/scout": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

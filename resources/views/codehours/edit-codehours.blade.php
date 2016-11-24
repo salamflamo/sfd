@@ -18,5 +18,16 @@
             </select>
 
     </div>
+    <div class="form-group">
+        <label >Role</label>
+
+        <select class="form-control" name="role" required="required">
+            <option >--Pilih--</option>
+            <option value="0" {{ $codehours->role == 'peserta' ? "selected" : "" }} >peserta</option>
+            <option value="1" {{ $codehours->role == 'admin' ? "selected" : "" }} >admin</option>
+
+        </select>
+
+    </div>
     <input type="submit" name='publish'  value = "Publish"/>
 </form>

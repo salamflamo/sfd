@@ -10,7 +10,7 @@ use App\Models\Role;
 use App\Models\Post;
 use App\Models\Comment;
 use Storage;
-
+use App\Codehours;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -100,4 +100,5 @@ class User extends Authenticatable
         }
         return null;
     }
+
 }

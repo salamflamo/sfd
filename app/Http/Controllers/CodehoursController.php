@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use\App\Codehours;
-
+use App\Codehours;
 class CodehoursController extends Controller
 {
     /**
@@ -43,6 +42,7 @@ class CodehoursController extends Controller
         $acakkode = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz",3)),0,3);
         $codehours->kode_codehours = $acakkode;
         $codehours->confirmed = 0;
+        $codehours->role = 'pemain';
         $codehours->save();
 
         $data = $codehours->kode_codehours;
@@ -81,12 +81,47 @@ class CodehoursController extends Controller
         $codehours->no_hp = $request->input('no_hp');
         $codehours->jurusan = $request->input('jurusan');
         $codehours->kode_codehours = $request->input('kode_codehours');
+        $codehours->role = $request->input('role');
         $codehours->confirmed = $request->input('confirmed');
         $codehours->save();
 
         return redirect('home');
     }
+    public function search(){
 
+
+                return view('codehours.cari-admin');
+
+    }
+    public function searchpost(Request $request){
+
+        $query = $request->get('query');
+        $hasil = Codehours::where('kode_codehours','LIKE','%'.$query.'%')->orderBy('id')->get();
+        return view('codehours.hasil',['hasil' => $hasil]);
+
+    }
+    public function searchpostadmin(Request $request){
+
+        $query = $request->get('query');
+        $hasil = Codehours::where('kode_codehours','LIKE','%'.$query.'%')->orderBy('id')->get();
+        return view('codehours.hasil-admin',['hasil' => $hasil]);
+
+    }
+    public function updateconfirmed(Request $request){
+        $id = $request->input('id');
+        $hasils = Codehours::find($id);
+        $hasils->nama = $request->input('nama');
+        $hasils->email = $request->input('email');
+        $hasils->no_hp = $request->input('no_hp');
+        $hasils->jurusan = $request->input('jurusan');
+        $hasils->kode_codehours = $request->input('kode_codehours');
+        $hasils->confirmed = $request->input('confirmed');
+        $hasils->role = $request->input('role');
+        $hasils->save();
+
+        return view('codehours.cari-admin');
+
+    }
     /**
      * Remove the specified resource from storage.
      *

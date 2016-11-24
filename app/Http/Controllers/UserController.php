@@ -141,4 +141,14 @@ class UserController extends Controller
 
         return view('back.users.blog_report', compact('authors'));
     }
+
+    public function is_admin(){
+        $role = $this->role;
+        if ($role == 'admin'){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 }
