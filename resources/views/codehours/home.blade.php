@@ -202,7 +202,7 @@
                     </div>
                     <div class="col-lg-12">
                         <a href="/daftar-codehours" class="btn btn-xl">Daftar Workshop</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="btn btn-xl">Daftar Gamification</a>
+                        <!--a href="#" class="btn btn-xl">Daftar Gamification</a-->
                     </div>
                 </div>
             </div>

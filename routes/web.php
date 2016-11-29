@@ -11,7 +11,7 @@ Route::post('/edit','PemainController@update');
 Route::get('/hapus/{id}','PemainController@destroy');
 Route::get('/lihat-pemain','PemainController@show_all');
 //codehours
-Route::get('/home','CodehoursController@index');
+Route::get('/','CodehoursController@index');
 Route::get('/daftar-codehours','CodehoursController@create');
 Route::post('/daftar-codehours','CodehoursController@store');
 Route::get('/edit-codehours/{id}','CodehoursController@edit');
@@ -23,7 +23,7 @@ Route::get('/sfdmulai','PemainController@dimulai');
 //Route::get('daftar-codehours','CodehoursController@index');
 
 // Home
-Route::get('/', 'HomeController')->name('home');
+Route::get('/home', 'HomeController')->name('home');
 
 // Language
 Route::get('language/{lang}', 'LanguageController')
@@ -37,7 +37,7 @@ Route::get('admin', 'AdminController')->name('admin');
 // Medias
 Route::get('medias', 'FilemanagerController')->name('medias');
 
-// Blog
+/* Blog
 Route::get('blog/tag', 'BlogFrontController@tag');
 Route::get('blog/search', 'BlogFrontController@search');
 Route::get('articles', 'BlogFrontController@index');
@@ -78,3 +78,4 @@ Route::get('confirm/{token}', 'Auth\RegisterController@confirm');
 // Notifications
 Route::get('notifications/{user}', 'NotificationController@index');
 Route::put('notifications/{notification}', 'NotificationController@update');
+*/
