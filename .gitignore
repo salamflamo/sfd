@@ -48,6 +48,6 @@ fabric.properties
 /node_modules
 
 database/database.sqlite
-public/files/.quarantine/
+public/filegits/.quarantine/
 public/files/.tmb/*
 .env
