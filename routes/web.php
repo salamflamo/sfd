@@ -2,7 +2,6 @@
 //search
 Route::get('/cari','CodehoursController@search');
 Route::post('/cari','CodehoursController@searchpost');
-Route::post('cari-admin','CodehoursController@searchpostadmin');
 Route::post('/cari-save','CodehoursController@updateconfirmed');
 //pemain
 Route::get('/daftar-mampir','PemainController@index');
@@ -21,7 +20,7 @@ Route::post('/edit-codehours','CodehoursController@update');
 Route::get('/sfdmulai','PemainController@dimulai');
 
 //codehours
-Route::get('daftar-codehours','CodehoursController@index');
+//Route::get('daftar-codehours','CodehoursController@index');
 
 // Home
 Route::get('/', 'HomeController')->name('home');

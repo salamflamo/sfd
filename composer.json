@@ -12,7 +12,8 @@
         "magyarjeti/laravel-lipsum": "^1.1",
         "doctrine/dbal": "^2.5",
         "cviebrock/laravel-elasticsearch": "^1.2",
-        "laravel/scout": "^1.1"
+        "laravel/scout": "^1.1",
+        "barryvdh/laravel-debugbar": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

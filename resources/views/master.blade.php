@@ -51,45 +51,36 @@
       }
     </style>
 </head>
-<body id="page-top" class="index">
 
-<!-- disini tempat untuk mengisi content,
-ada beberapa content yang dipisah, dan urutannya adalah
-1 navbar.blade -> ini untuk menu navbar
-2 detail.blade -> ini untuk detail acara
-3 rundown.blade -> ini untuk rundown acara
-4 pembicara.blade -> ini untuk pembicara talkshow
-5 sponsor.blade -> ini untuk semua sponsor -->
 
-@yield('content')
-<!-- ini mengacu ke semua file diatas , kecuali workshop.blade dan gamification.blade, login.blade, thanks.blade tujuannya untuk pindah halaman -->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Made with &hearts; by Dinus Open Source Community</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/doscomedia"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/doscomedia/"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.instagram.com/doscomedia/"><i class="fa fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="https://startbootstrap.com/">Thanks to Start Bootstrap</li>
-                        <li><a href="http://www.freepik.com">Designed by Freepik</a></li>
-                        <li><a href="http://protiumdesign.com">Protium Design</a></i>
-                    </ul>
-                </div>
+@yield('home')
+@yield('daftar')
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Made with &hearts; by Dinus Open Source Community</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li><a href="https://twitter.com/doscomedia"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/doscomedia/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/doscomedia/"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li><a href="https://startbootstrap.com/">Thanks to Start Bootstrap</li>
+                    <li><a href="http://www.freepik.com">Designed by Freepik</a></li>
+                    <li><a href="http://protiumdesign.com">Protium Design</a></i>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 <!-- jQuery -->
 {!! Html::script('vendor-workshop/jquery/jquery.min.js') !!}
 <!-- Bootstrap Core JavaScript -->

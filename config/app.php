@@ -211,6 +211,7 @@ return [
         Magyarjeti\LaravelLipsum\LipsumServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
         App\Providers\ElfinderServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -263,6 +264,7 @@ return [
         'Lipsum' => Magyarjeti\LaravelLipsum\LipsumFacade::class,
         'Elasticsearch' => Cviebrock\LaravelElasticsearch\Facade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

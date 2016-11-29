@@ -1,3 +1,4 @@
+@extends('master')
 @foreach($hasil as $hasils)
     <form role="form" method="POST" action="{{ url('/cari-save') }}"
           xmlns="http://www.w3.org/1999/html">

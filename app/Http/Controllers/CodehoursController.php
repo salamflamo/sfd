@@ -13,7 +13,7 @@ class CodehoursController extends Controller
      */
     public function index()
     {
-        return view ('master');
+        return view ('codehours.home');
     }
 
     /**
@@ -42,7 +42,7 @@ class CodehoursController extends Controller
         $acakkode = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz",3)),0,3);
         $codehours->kode_codehours = $acakkode;
         $codehours->confirmed = 0;
-        $codehours->role = 'pemain';
+
         $codehours->save();
 
         $data = $codehours->kode_codehours;
@@ -81,7 +81,7 @@ class CodehoursController extends Controller
         $codehours->no_hp = $request->input('no_hp');
         $codehours->jurusan = $request->input('jurusan');
         $codehours->kode_codehours = $request->input('kode_codehours');
-        $codehours->role = $request->input('role');
+
         $codehours->confirmed = $request->input('confirmed');
         $codehours->save();
 
@@ -93,7 +93,7 @@ class CodehoursController extends Controller
 
 
     }
-    public function searchpostadmin(Request $request){
+    public function searchpost(Request $request){
 
         $query = $request->get('query');
         $hasil = Codehours::where('kode_codehours','LIKE','%'.$query.'%')->orderBy('id')->get();
@@ -109,7 +109,6 @@ class CodehoursController extends Controller
         $hasils->jurusan = $request->input('jurusan');
         $hasils->kode_codehours = $request->input('kode_codehours');
         $hasils->confirmed = $request->input('confirmed');
-        $hasils->role = $request->input('role');
         $hasils->save();
 
         return view('codehours.cari-admin');

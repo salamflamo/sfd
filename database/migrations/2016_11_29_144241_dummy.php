@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TambahRoleCodehours extends Migration
+class Dummy extends Migration
 {
     /**
      * Run the migrations.
@@ -26,6 +26,8 @@ class TambahRoleCodehours extends Migration
      */
     public function down()
     {
-
+        Schema::table('codehours', function ($table) {
+            $table->dropColumn('role');
+        });
     }
 }
