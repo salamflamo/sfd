@@ -198,7 +198,7 @@
 
                 <div id="daftar" class="row text-center">
                     <div class="col-lg-12">
-                        <h3>DAFTAR WORKSHOP DAN GAMIFICATION</h3>
+                        <h3>DAFTAR WORKSHOP</h3>
                     </div>
                     <div class="col-lg-12">
                         <a href="/daftar-codehours" class="btn btn-xl">Daftar Workshop</a>&nbsp;&nbsp;&nbsp;&nbsp;

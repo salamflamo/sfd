@@ -23,7 +23,12 @@ class CodehoursController extends Controller
      */
     public function create()
     {
-        return view('codehours.daftar');
+        $peserta = Codehours::all()->count();
+
+
+            return view('codehours.daftar')->withPeserta($peserta);
+
+
     }
 
     /**
