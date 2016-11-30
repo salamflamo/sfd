@@ -10,10 +10,12 @@ tapi tidak masuk content -->
 
     <form role="form" method="POST" action="{{ url('/daftar-codehours') }}"
           xmlns="http://www.w3.org/1999/html">
+
 <section id="workshop" class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
             <h1 class="section-heading">Pendaftaran Workshop</h1><br>
+            @if($peserta<=35)
             <h5 class="section-subheading text-muted">Isi kolom dibawah dengan lengkap untuk daftar workshop</h5>
         </div>
     </div>
@@ -53,6 +55,7 @@ tapi tidak masuk content -->
     </div>
 </section>
     </form>
-
+    @endif
+    <h2>Mohon maaf kursi sudah penuh, mohon antri hingga codehours 2017 :*<h2>
 
 @endsection
