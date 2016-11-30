@@ -5,6 +5,9 @@
 
 <!-- file ini hanya meng extends, dimana file ini hanya perlu css dan lain-lain untuk membuat tampilannya
 tapi tidak masuk content -->
+
+
+
     <form role="form" method="POST" action="{{ url('/daftar-codehours') }}"
           xmlns="http://www.w3.org/1999/html">
 <section id="workshop" class="container">
@@ -42,7 +45,7 @@ tapi tidak masuk content -->
                     <div class="col-lg-12 text-center">
                         <!-- ini saat klik daftar dan berhasil maka akan dilempar ke thanks.blade -->
                         <input type="submit" name='publish' class="btn btn-xl" value = "Publish"/>
-                        <a href="/home" class="btn btn-xl">Cancel</a>
+                        <a href="/" class="btn btn-xl">Cancel</a>
                     </div>
                 </div>
             </form>
@@ -50,4 +53,6 @@ tapi tidak masuk content -->
     </div>
 </section>
     </form>
+
+
 @endsection
