@@ -44,8 +44,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-/vendor
-/node_modules
 
 database/database.sqlite
 public/filegits/.quarantine/
